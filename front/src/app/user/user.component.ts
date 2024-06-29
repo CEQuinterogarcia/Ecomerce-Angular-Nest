@@ -11,4 +11,8 @@ import { ProductComponent } from '../product/product.component';
 export class UserComponent {
 username = 'CEQUINTERO';
 login = false;
+clic(){
+  alert('Hola click')
+  this.login=false;
+}
 }
