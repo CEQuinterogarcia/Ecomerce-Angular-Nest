@@ -24,22 +24,42 @@ import { Payment } from './payment/payment.model';
 import { Product } from './product/product.model';
 import { Review } from './reviews/reviews.model';
 
-
+//psql "postgres://default:7cOZ4QJDwfrp@ep-calm-field-a48397kt.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require"
 
 @Module({
- imports:[
-  SequelizeModule.forRoot({
-    dialect: 'postgres',
-    dialectModule: pg, 
-    host: 'localhost',
-    port: 5432,
-    username: 'postgres',
-    password: '1234',
-    database: 'ecomerce',
-    autoLoadModels: true,
-    synchronize: true,
-    models: [User, Address, Cart, CartProduct, Category, Order, OrderDetail, Payment, Product, Review],
-  }),
+  imports: [
+    SequelizeModule.forRoot({
+      dialect: 'postgres',
+      dialectModule: pg,
+      host: 'ep-calm-field-a48397kt.us-east-1.aws.neon.tech',
+      port: 5432,
+      username: 'default',
+      password: '7cOZ4QJDwfrp',
+      database: 'verceldb',
+      autoLoadModels: true,
+      synchronize: true,
+      ssl: true,
+      dialectOptions: {
+        ssl: {
+          require: true, // This will help you. But you will see nwe error
+          rejectUnauthorized: false // This line will fix new error
+        }
+      },
+      models: [User, Address, Cart, CartProduct, Category, Order, OrderDetail, Payment, Product, Review],
+    }),
+//  imports:[
+//   SequelizeModule.forRoot({
+//     dialect: 'postgres',
+//     dialectModule: pg, 
+//     host: 'localhost',
+//     port: 5432,
+//     username: 'postgres',
+//     password: '1234',
+//     database: 'ecomerce',
+//     autoLoadModels: true,
+//     synchronize: true,
+//     models: [User, Address, Cart, CartProduct, Category, Order, OrderDetail, Payment, Product, Review],
+//   }),
   UsersModule, 
   ReviewsModule, 
   ProductModule, 

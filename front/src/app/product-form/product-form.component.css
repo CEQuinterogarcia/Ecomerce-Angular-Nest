@@ -1,0 +1,24 @@
+form {
+    display: flex;
+    width: 40vw;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  
+  div {
+    margin-bottom: 1em;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 0.5em;
+  }
+  
+  button {
+    padding: 0.5em 1em;
+  }
+  
+  div > div {
+    color: red;
+    font-size: 0.8em;
+  }
