@@ -32,10 +32,10 @@
     </div>
 
     <div>
-        <label for="category">Categoria</label>
-        <input id="category" formControlName="category">
-        <div *ngIf="productForm.get('category')?.invalid && productForm.get('category')?.touched">
-          El nombre es requerido.
+        <label for="categoryId">Categoria</label>
+        <input id="categoryId" type="number" formControlName="categoryId">
+        <div *ngIf="productForm.get('categoryId')?.invalid && productForm.get('categoryId')?.touched">
+          
         </div>
     </div>
 

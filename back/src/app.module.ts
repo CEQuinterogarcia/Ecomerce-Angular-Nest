@@ -24,7 +24,7 @@ import { Payment } from './payment/payment.model';
 import { Product } from './product/product.model';
 import { Review } from './reviews/reviews.model';
 
-//psql "postgres://default:7cOZ4QJDwfrp@ep-calm-field-a48397kt.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require"
+
 
 @Module({
   imports: [
