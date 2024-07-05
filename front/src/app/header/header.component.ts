@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
-
-
 
 @Component({
   selector: 'app-header',
@@ -14,5 +13,12 @@ import {MatMenuModule} from '@angular/material/menu';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  constructor(private router: Router) {}
 
+  navigateToAddProduct() {
+    this.router.navigate(['/productform']);
+  }
+  navigateHome() {
+    this.router.navigate(['/home']);
+  }
 }

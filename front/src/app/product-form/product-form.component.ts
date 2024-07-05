@@ -4,11 +4,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common'; // Importa CommonModule
 import { ProductFormService } from './product-form.service';
 import { provideHttpClient } from '@angular/common/http'; // Importa HttpClientModule
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-product-form',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule, HeaderComponent],
   templateUrl: './product-form.component.html',
   styleUrls: ['./product-form.component.css'] // Corregido a styleUrls
 })

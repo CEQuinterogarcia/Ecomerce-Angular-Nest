@@ -8,11 +8,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { ProductcardComponent } from './productcard/productcard.component';
 import { HomeComponent } from './home/home.component';
+import { ProductFormComponent } from './product-form/product-form.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserComponent, ProductComponent, HeaderComponent, ReactiveFormsModule, HttpClientModule, MatCardModule, ProductcardComponent, HomeComponent ],
+  imports: [RouterOutlet, UserComponent, ProductComponent, HeaderComponent, ReactiveFormsModule, HttpClientModule, MatCardModule, ProductcardComponent, HomeComponent, ProductFormComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

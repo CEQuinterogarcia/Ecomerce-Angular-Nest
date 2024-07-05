@@ -11,7 +11,8 @@
         <div></div>
         <img src="/assets/logo.jpg" alt="Descripción de la imagen" class="logo">
         <div class="spacer"></div>
-        <button mat-flat-button routerLink="/home">Home</button>
+        <button mat-flat-button routerLink="/home"  (click)="navigateHome()">Home</button>
+        <button mat-flat-button routerLink="/productform" (click)="navigateToAddProduct()">Crear Producto</button>
         <button mat-flat-button routerLink="/about">About</button>
         <button mat-flat-button routerLink="/contact">Contact</button>
         <button mat-flat-button routerLink="/detail">Detail</button>
