@@ -1,74 +1,65 @@
 import { Component } from '@angular/core';
+import { ProductcardComponent } from '../productcard/productcard.component';
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [],
+  imports: [ProductcardComponent],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
 export class ProductComponent {
- product = [
-    {
-        "name": "Smartphone X200",
-        "brand": "TechCorp",
-        "release_date": "2024-05-10",
-        "features": {
-            "screen_size": "6.5 inches",
-            "battery_life": "24 hours",
-            "camera": "108 MP",
-            "processor": "Octa-core 3.1 GHz"
-        },
-        "price": "799.99"
-    },
-    {
-        "name": "Laptop Pro 15",
-        "brand": "ComputeX",
-        "release_date": "2024-03-22",
-        "features": {
-            "screen_size": "15.6 inches",
-            "battery_life": "10 hours",
-            "processor": "Intel i7 12th Gen",
-            "ram": "16 GB",
-            "storage": "1 TB SSD"
-        },
-        "price": "1299.99"
-    },
-    {
-        "name": "Smartwatch A1",
-        "brand": "WearTech",
-        "release_date": "2024-04-15",
-        "features": {
-            "screen_size": "1.8 inches",
-            "battery_life": "48 hours",
-            "water_resistance": "50 meters",
-            "compatibility": "iOS and Android"
-        },
-        "price": "199.99"
-    },
-    {
-        "name": "Wireless Earbuds Z",
-        "brand": "SoundWave",
-        "release_date": "2024-06-01",
-        "features": {
-            "battery_life": "8 hours",
-            "charging_case": "24 hours",
-            "noise_cancellation": "Active",
-            "connectivity": "Bluetooth 5.2"
-        },
-        "price": "149.99"
-    },
-    {
-        "name": "4K Ultra HD TV",
-        "brand": "VisionMax",
-        "release_date": "2024-02-10",
-        "features": {
-            "screen_size": "55 inches",
-            "resolution": "3840 x 2160",
-            "smart_tv": "Yes",
-            "hdmi_ports": "4"
-        },
-        "price": "999.99"
+     product1 = {
+        name: 'Impresora Samsung',
+        description: 'Impresora 3D con alta precisión y compatibilidad con varios tipos de filamento.',
+        price: 700,
+        stock: 5,
+        image: 'https://cdn.shopify.com/s/files/1/0029/6838/7619/products/71keLzRdw3L._SL1500_1024x1024.jpg?v=1604568996',
+        category: 'Electronics'
+      };
+      
+       product2 = {
+        name: 'Laptop Dell XPS 13',
+        description: 'Ultrabook de alto rendimiento con pantalla InfinityEdge y procesador Intel Core i7.',
+        price: 1200,
+        stock: 8,
+        image: 'https://cdn.shopify.com/s/files/1/0029/6838/7619/products/71keLzRdw3L._SL1500_1024x1024.jpg?v=1604568996',
+        category: 'Computers'
+      };
+      
+       product3 = {
+        name: 'Auriculares Bose QC35',
+        description: 'Auriculares inalámbricos con cancelación de ruido y batería de larga duración.',
+        price: 300,
+        stock: 15,
+        image: 'https://cdn.shopify.com/s/files/1/0029/6838/7619/products/71keLzRdw3L._SL1500_1024x1024.jpg?v=1604568996',
+        category: 'Audio'
+      };
+      
+       product4 = {
+        name: 'Cámara Canon EOS R',
+        description: 'Cámara sin espejo con sensor full-frame y capacidad de grabación 4K.',
+        price: 1800,
+        stock: 4,
+        image: 'https://cdn.shopify.com/s/files/1/0029/6838/7619/products/canon-eos-r_1024x1024.jpg?v=1604568996',
+        category: 'Cameras'
+      };
+      
+       product5 = {
+        name: 'Smartphone Samsung Galaxy S21',
+        description: 'Teléfono inteligente con pantalla AMOLED de 6.2 pulgadas y cámara de 64 MP.',
+        price: 999,
+        stock: 10,
+        image: 'https://cdn.shopify.com/s/files/1/0029/6838/7619/products/samsung-galaxy-s21_1024x1024.jpg?v=1604568996',
+        category: 'Phones'
+      };
+      
+       product6 = {
+        name: 'Smart TV LG OLED55CXPUA',
+        description: 'Televisor inteligente OLED de 55 pulgadas con resolución 4K y compatibilidad con HDR.',
+        price: 1500,
+        stock: 6,
+        image: 'https://cdn.shopify.com/s/files/1/0029/6838/7619/products/lg-oled55cxpua_1024x1024.jpg?v=1604568996',
+        category: 'Televisions'
+      };
     }
-]
-}

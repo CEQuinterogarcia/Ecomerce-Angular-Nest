@@ -1,6 +1,6 @@
 
-<ul>
-    @for (produt of product; track produt.name) {
-        <li>{{produt.name}}</li>
-    }
-</ul>
+<div class="product-list">
+    <app-productcard [product]="product1"></app-productcard>
+    <app-productcard [product]="product2"></app-productcard>
+    <app-productcard [product]="product3"></app-productcard>
+</div>
