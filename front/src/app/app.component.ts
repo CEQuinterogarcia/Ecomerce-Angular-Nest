@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { UserComponent } from './user/user.component';
 import { ProductComponent } from './product/product.component';
@@ -10,14 +10,35 @@ import { ProductcardComponent } from './productcard/productcard.component';
 import { HomeComponent } from './home/home.component';
 import { ProductFormComponent } from './product-form/product-form.component';
 
+// Import the Cloudinary classes.
+import {Cloudinary, CloudinaryImage} from '@cloudinary/url-gen';
+
+// Import the plugin.
+import {lazyload} from '@cloudinary/ng';
+
+// Import the SDK
+import {CloudinaryModule} from '@cloudinary/ng';
+
+
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserComponent, ProductComponent, HeaderComponent, ReactiveFormsModule, HttpClientModule, MatCardModule, ProductcardComponent, HomeComponent, ProductFormComponent ],
+  imports: [CloudinaryModule, RouterOutlet, UserComponent, ProductComponent, HeaderComponent, ReactiveFormsModule, HttpClientModule, MatCardModule, ProductcardComponent, HomeComponent, ProductFormComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  title = 'front';
-  pais = 'COLOMBIA';
+export class AppComponent implements OnInit {
+
+  img!: CloudinaryImage;
+
+  ngOnInit() {
+
+    // Create a Cloudinary instance and set your cloud name.
+    const cld = new Cloudinary({
+      cloud: {
+        cloudName: 'dovqx8xxt'
+      }
+    });
+  }
 }

@@ -1,8 +1,18 @@
+.formProduct{
+  width: 80vw;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr); /* Cuatro columnas de igual ancho */
+  gap: 10px; /* Espacio entre los elementos */
+  padding: 2vw;
+}
 form {
     display: flex;
-    width: 40vw;
+    width: 30vw;
     flex-direction: column;
     margin: 0 auto;
+    border: 2px;
+    border-color: cadetblue;
   }
   
   div {

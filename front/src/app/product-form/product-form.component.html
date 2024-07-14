@@ -1,9 +1,8 @@
 <div>
   <app-header/>
 </div> 
-<div>
+<div class="formProduct">
 
-</div>
 
 <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
     <div>
@@ -58,3 +57,5 @@
     <button type="submit" [disabled]="productForm.invalid">Agregar Producto</button>
   </form>
 
+
+</div>
