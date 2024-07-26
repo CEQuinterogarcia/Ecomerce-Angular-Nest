@@ -4,13 +4,15 @@ import { ProductFormComponent } from './product-form/product-form.component';
 import { DetailComponent } from './detail/detail.component';
 
 
-export const routes: Routes = [
+export const AppRoutes: Routes = [
    
   { path: 'home', component: HomeComponent },
-  { path: 'detail', component: DetailComponent },
   { path: 'productform', component: ProductFormComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },  // Ruta por defecto
-  { path: '**', redirectTo: '/home' }  // Ruta para manejar páginas no encontradas
+  //{ path: 'about', component: AboutComponent },
+  //{ path: 'contact', component: ContactComponent },
+  { path: 'detail', component: DetailComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', redirectTo: '/home' }
   
 ];
 

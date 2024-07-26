@@ -21,4 +21,8 @@ export class HeaderComponent {
   navigateHome() {
     this.router.navigate(['/home']);
   }
+
+  navigateDetail() {
+    this.router.navigate(['/detail']);
+  }
 }

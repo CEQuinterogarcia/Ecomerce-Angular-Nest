@@ -1,11 +1,14 @@
 
     <div class="product-list">
-        <app-productcard [product]="product1"></app-productcard>
-        <app-productcard [product]="product2"></app-productcard>
-        <app-productcard [product]="product3"></app-productcard>
-        <app-productcard [product]="product4"></app-productcard>
-        <app-productcard [product]="product5"></app-productcard>
-        <app-productcard [product]="product6"></app-productcard>
+        <ng-container *ngFor="let product of products">
+            <app-productcard [product]="product"></app-productcard>
+        </ng-container>
+        <!-- <app-productcard [product]="products[0]"></app-productcard>
+        <app-productcard [product]="products[1]"></app-productcard>
+        <app-productcard [product]="products[2]"></app-productcard>
+        <app-productcard [product]="products[3]"></app-productcard>
+        <app-productcard [product]="products[4]"></app-productcard>
+        <app-productcard [product]="products[5]"></app-productcard> -->
     </div>
 
 

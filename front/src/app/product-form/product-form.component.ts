@@ -5,19 +5,22 @@ import { CommonModule } from '@angular/common'; // Importa CommonModule
 import { ProductFormService } from './product-form.service';
 import { provideHttpClient } from '@angular/common/http'; // Importa HttpClientModule
 import { HeaderComponent } from '../header/header.component';
+import { ProductComponent } from '../product/product.component';
 
 @Component({
   selector: 'app-product-form',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule, HeaderComponent],
+  imports: [ReactiveFormsModule, CommonModule, HeaderComponent, ProductComponent],
   templateUrl: './product-form.component.html',
   styleUrls: ['./product-form.component.css'] // Corregido a styleUrls
 })
 export class ProductFormComponent {
   productForm: FormGroup;
   produc: any;
+  productss: any[] = [];
+  
 
-  constructor(private fb: FormBuilder, private productService: ProductFormService) {
+  constructor(private fb: FormBuilder, private productService: ProductFormService, ProductComponent: ProductComponent) {
     this.productForm = this.fb.group({
       name: ['', Validators.required],
       description: ['', Validators.required],
@@ -26,7 +29,10 @@ export class ProductFormComponent {
       categoryId: ['', Validators.required],
       image: ['', Validators.required]
     });
+
+    
   }
+
 
   onSubmit() {
     if (this.productForm.valid) {
